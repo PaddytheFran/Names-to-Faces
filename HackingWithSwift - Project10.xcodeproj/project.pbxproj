@@ -42,6 +42,7 @@
 				F9BFF9EA1FEE968F0037CED4 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		F9BFF9EA1FEE968F0037CED4 /* Products */ = {
 			isa = PBXGroup;
