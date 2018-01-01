@@ -24,6 +24,13 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
 
 		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
 	
+		let defaults = UserDefaults.standard
+		
+		if let savedPeople = defaults.object(forKey: "people") as? Data {
+			people = NSKeyedUnarchiver.unarchiveObject(with: savedPeople) as! [Person]
+		}
+		
+		
 	}
 
 	@objc func addNewPerson() {
@@ -110,6 +117,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
 			person.name = newName.text!
 			
 			self.collectionView?.reloadData()
+			self.save()
 			
 		})
 		
