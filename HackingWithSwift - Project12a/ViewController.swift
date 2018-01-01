@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  HackingWithSwift - Project10
+//  HackingWithSwift - Project12a
 //
 //  Created by Patrick Flanagan on 12/23/17.
 //  Copyright © 2017 Patrick Flanagan. All rights reserved.
@@ -11,6 +11,13 @@ import UIKit
 class ViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
 	var people = [Person]()
+	
+	func save() {
+		let savedData = NSKeyedArchiver.archivedData(withRootObject: people)
+		let defaults = UserDefaults.standard
+		defaults.set(savedData, forKey: "people")
+	}
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()

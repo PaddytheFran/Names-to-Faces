@@ -1,6 +1,6 @@
 //
 //  PersonCell.swift
-//  HackingWithSwift - Project10
+//  HackingWithSwift - Project12a
 //
 //  Created by Patrick Flanagan on 12/23/17.
 //  Copyright © 2017 Patrick Flanagan. All rights reserved.
